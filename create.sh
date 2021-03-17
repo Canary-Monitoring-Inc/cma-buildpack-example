@@ -12,7 +12,7 @@ Application "$appName" for the Canary Monitoring Agent created.
 
 The only mandatory setting is the Canary Monitoring API Key. You can enter it here to
 write it in the application's configuration in heroku, or Ctrl-C out and do that
-in a different way. The name is `CANARY_API_TOKEN`.
+in a different way. The name is "CANARY_API_TOKEN".
 
 EOF
 
@@ -21,4 +21,9 @@ read api_key && heroku config:set -a $appName CANARY_API_TOKEN=$api_key
 cat <<EOF
 
 All set. You can now "git push heroku main" to deploy, or do more configuration first.
+Note: the buildpack specifies a "worker" process type, so you need to one-time scale
+to actually enable the agent post-deploy:
+
+    $ heroku scale worker=1
+
 EOF
