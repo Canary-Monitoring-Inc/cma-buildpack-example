@@ -1,6 +1,6 @@
 # CMA Buildpack Example
 
-This repository contains an example for the Canary Monitoring Agent Heroku Buildpack.
+This repository contains an example for the [Canary Monitoring Agent Heroku Buildpack](https://github.com/Canary-Monitoring-Inc/cma-buildpack).
 
 The buildpack will deploy a Canary Monitoring Agent instance, you can then send
 telemetry data to there from your other dynos.
