@@ -21,9 +21,9 @@ read api_key && heroku config:set -a $appName CANARY_API_TOKEN=$api_key
 cat <<EOF
 
 All set. You can now "git push heroku main" to deploy, or do more configuration first.
-Note: the buildpack specifies a "worker" process type, so you need to one-time scale
+Note: the buildpack specifies a "cma" process type, so you need to one-time scale
 to actually enable the agent post-deploy:
 
-    $ heroku scale worker=1
+    $ heroku scale cma=1
 
 EOF
